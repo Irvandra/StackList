@@ -13,7 +13,7 @@ using namespace std;
 class Lingkaran{
 public:
     double radius;
-    
+    Lingkaran *next;
     Lingkaran(){
         this->radius=1;
     }
@@ -33,13 +33,13 @@ public:
 
 class ListStack{
 public:
-	int total;
+	  int total;
     Lingkaran *top;
     
     ListStack(){
         top = NULL;
     }
-    bool isEmpty(){
+bool isEmpty(){
         //anggota 1
     	return total == 0;
     }
@@ -47,16 +47,40 @@ public:
         //anggota 1
         return total >= MAX_STACK_SIZE;
     }
-    void push(Lingkaran *item){
+    void push(){
         //anggota 2
+        item->next=NULL; 
+		if(!isFull()){    
+        	if (isEmpty()){
+        		top=item;
+        	} else {
+        		item->next=top;
+        		top=item;
+        	}
+        	cout<<"Stack Added"<<endl;
+          total++;
+    	}
     }
     void push(double radius){
         //anggota 2
+        Lingkaran *item;
+        item = new Lingkaran(radius);
+        item->next=NULL;     
+        if(!isFull()){
+			if (isEmpty()){
+    			top=item;
+        	} else {
+        		item->next=top;
+        		top=item;
+        	}
+        	cout<<"Stack Added"<<endl;
+          total++;
+    	}
     }
     Lingkaran *pop(){
     	//Anggota 3
     }
 };
 int main(){
-	
+  
 }
