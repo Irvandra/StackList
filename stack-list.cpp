@@ -33,15 +33,19 @@ public:
 
 class ListStack{
 public:
+	  int total;
     Lingkaran *top;
-    ArrayStack(){
-        top=NULL;
+    
+    ListStack(){
+        top = NULL;
     }
 bool isEmpty(){
         //anggota 1
+    	return total == 0;
     }
     bool isFull(){
         //anggota 1
+        return total >= MAX_STACK_SIZE;
     }
     void push(){
         //anggota 2
@@ -54,6 +58,7 @@ bool isEmpty(){
         		top=item;
         	}
         	cout<<"Stack Added"<<endl;
+          total++;
     	}
     }
     void push(double radius){
@@ -69,12 +74,13 @@ bool isEmpty(){
         		top=item;
         	}
         	cout<<"Stack Added"<<endl;
+          total++;
     	}
     }
     Lingkaran *pop(){
-        //anggota 3
+    	//Anggota 3
     }
 };
 int main(){
-    
+  
 }
