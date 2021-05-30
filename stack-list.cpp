@@ -36,13 +36,15 @@ public:
     ArrayStack(){
         top=NULL;
     }
-    bool isEmpty(){
+bool isEmpty(){
         //anggota 1
+    	return total == 0;
     }
     bool isFull(){
         //anggota 1
+        return total >= MAX_STACK_SIZE;
     }
-    void push(Lingkaran *item){
+    void push(){
         //anggota 2
     }
     void push(double radius){
