@@ -44,9 +44,27 @@ public:
     }
     void push(Lingkaran *item){
         //anggota 2
+        item->next=NULL;     
+        if (isEmpty()){
+        	top=item;
+        } else {
+        	item->next=top;
+        	top=item;
+        }
+        cout<<"Stack Added"<<endl;
     }
     void push(double radius){
         //anggota 2
+        Lingkaran *item;
+        item = new Lingkaran(radius);
+        item->next=NULL;     
+        if (isEmpty()){
+    		top=item;
+        } else {
+        	item->next=top;
+        	top=item;
+        }
+        cout<<"Stack Added"<<endl;
     }
     Lingkaran *pop(){
         //anggota 3
