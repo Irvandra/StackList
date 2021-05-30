@@ -56,22 +56,24 @@ public:
     	Lingkaran *temp, *returned;
     	    	
     	if(isEmpty()){
-            cout<<"Stack Kosong"<<endl;
-            return NULL;    		
-		}else{
-			temp = top;
+		cout<<"Stack Kosong"<<endl;
+		return NULL;    		
+	}
+	else
+	{
+		temp = top;
 			
-			while(temp -> next != NULL){
-				top = temp;
-				temp -> next = temp -> next -> next;
-			}
-			
-			returned = temp;
-			
-			delete(temp);
-			
-			return returned;
+		while(temp -> next != NULL){
+			top = temp;
+			temp -> next = temp -> next -> next;
 		}
+			
+		returned = temp;
+			
+		delete(temp);
+			
+		return returned;
+	}
     }
 };
 int main(){
