@@ -13,6 +13,7 @@ using namespace std;
 class Lingkaran{
 public:
     double radius;
+    
     Lingkaran(){
         this->radius=1;
     }
@@ -32,9 +33,11 @@ public:
 
 class ListStack{
 public:
-    int *top;
-    ArrayStack(){
-        top=NULL;
+	int total;
+    Lingkaran *top;
+    
+    ListStack(){
+        top = NULL;
     }
     bool isEmpty(){
         //anggota 1
@@ -51,9 +54,9 @@ public:
         //anggota 2
     }
     Lingkaran *pop(){
-        //anggota 3
+    	//Anggota 3
     }
 };
 int main(){
-    
+	
 }
