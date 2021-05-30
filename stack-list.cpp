@@ -87,23 +87,25 @@ public:
       Lingkaran *temp, *returned;
 
       if(isEmpty()){
-        cout<<"Stack Kosong"<<endl;
+        cout<<"Stack Is Empty"<<endl;
         return NULL;    		
       }
       else
       {
         temp = top;
+        returned = top;
 
         while(temp -> next != NULL){
           top = temp;
-          temp -> next = temp -> next -> next;
+          temp = temp -> next;
         }
 
-        returned = temp;
-
+	top -> next = NULL;
+	      
         delete(temp);
-				total--;
+	total--;
 
+        cout<<"Stack Deleted"<<endl;
         return returned;
       }
    }
