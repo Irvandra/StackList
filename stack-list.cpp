@@ -13,6 +13,7 @@ using namespace std;
 class Lingkaran{
 public:
     double radius;
+    Lingkaran *next;
     Lingkaran(){
         this->radius=1;
     }
@@ -32,7 +33,7 @@ public:
 
 class ListStack{
 public:
-    int *top;
+    Lingkaran *top;
     ArrayStack(){
         top=NULL;
     }
