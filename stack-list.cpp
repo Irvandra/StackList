@@ -44,32 +44,36 @@ public:
         //anggota 1
     }
     void push(Lingkaran *item){
-        //anggota 2
-        item->next=NULL; 
-		if(!isFull()){    
-        	if (isEmpty()){
+	//anggota 2
+	item->next=NULL; 
+	if(!isFull()){    
+		if (isEmpty()){
         		top=item;
-        	} else {
+		} else {
         		item->next=top;
         		top=item;
-        	}
+		}
         	cout<<"Stack Added"<<endl;
-    	}
+    	} else {
+    		cout<<"Stack Full"<<endl;
+	}
     }
     void push(double radius){
-        //anggota 2
-        Lingkaran *item;
-        item = new Lingkaran(radius);
-        item->next=NULL;     
-        if(!isFull()){
-			if (isEmpty()){
+	//anggota 2
+	Lingkaran *item;
+	item = new Lingkaran(radius);
+	item->next=NULL;     
+	if(!isFull()){
+		if (isEmpty()){
     			top=item;
-        	} else {
+		} else {
         		item->next=top;
         		top=item;
-        	}
+		}
         	cout<<"Stack Added"<<endl;
-    	}
+	} else {
+    		cout<<"Stack Full"<<endl;
+	}
     }
     Lingkaran *pop(){
         //anggota 3
